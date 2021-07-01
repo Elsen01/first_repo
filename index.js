@@ -1,12 +1,8 @@
-
-
-
 //     const Palindrome =(str)=>{
 //     const isPalindrome =str.split('').reverse().join('');
 //     console.log(str===isPalindrome);
 // }
 // Palindrome('bes');
-
 
 
 // const reversedNum =num=> parseInt(num.toString().split('').reverse().join('')) * Math.sign(num)
@@ -18,7 +14,6 @@
 
 // const reversedNum =(num)=>parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
 // console.log(reversedNum(12345));
-
 
 
 // function fizzBuzz(n) {
@@ -99,8 +94,6 @@
 //     }
 
 
-
-
 // }
 
 // var testCase ='dsdbbbbzzzzs'
@@ -147,7 +140,6 @@
 // let sumOfEven = sumDiviseble(arr, isEven);
 // let sumOfElder = sumDiviseble(arr, isOlder);
 // let sumOfAnquts = sumOfDiviseble(arr, n => n > 20 && n % 2 == 0 && n < 100)
-
 
 
 // console.log(sumOfEven, sumOfElder, sumOfAnquts);
@@ -296,22 +288,22 @@
 // var array = [12, 3, 4, 55, 6, 56, 7, 22, 5, 36];
 // var size = 3;
 // console.log(chunk(array,size));
-function capitalize(str){
-    const words =[];
-    for(let word of str.split(' ')){
-        words.push(word[0].toUpperCase() +word.slice(1));
+function capitalize(str) {
+    const words = [];
+    for (let word of str.split(' ')) {
+        words.push(word[0].toUpperCase() + word.slice(1));
     }
     return words.join(' ');
 }
 
-function anagrams(stringA, stringB){
-    const aCharMap=buildCharMap(stringA);
-    const bCharMap=buildCharMap(stringB);
-    if(Object.keys(aCharMap).length !== Object.keys(bCharMap).length){
-return false;
+function anagrams(stringA, stringB) {
+    const aCharMap = buildCharMap(stringA);
+    const bCharMap = buildCharMap(stringB);
+    if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+        return false;
     }
-    for(char in aCharMap){
-        if(aCharMap[char] !== bCharMap[char]){
+    for (char in aCharMap) {
+        if (aCharMap[char] !== bCharMap[char]) {
             return false;
         }
     }
@@ -319,11 +311,10 @@ return false;
 }
 
 
-function buildCharMap(str){
-    const charMap ={};
+function buildCharMap(str) {
+    const charMap = {};
 
-for(let char of str.replace(/[^\w]/g,'').toLowerCase().split('').sort().join('')){
-    charMap[char] = charMap [char] + 1 || 1;
-}
-
+    for (let char of str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')) {
+        charMap[char] = charMap [char] + 1 || 1;
+    }
 }
